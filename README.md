@@ -1,5 +1,10 @@
 # Flex
-Comparador de preços de combustível
+![flex50x50](https://user-images.githubusercontent.com/66964752/123490741-39484300-d5eb-11eb-8b0d-503ae3119c5a.png)
+
+Comparador de preços de combustível!
+Prático e simples, o motorista informa os preços dos combustíveis e o aplicativo faz a conta.
+Este aplicativo calcula a melhor opção para o abastecimento levando em consideração o valor do combustível e o consumo médio dos veículos flex. ​A vantagem é calculada considerando que o poder calorífico do motor ao Etanol é de 70% do poder dos motores à gasolina.
 
 
-![printSplash](https://user-images.githubusercontent.com/66964752/123490536-aad3c180-d5ea-11eb-9787-f77e2ac841e9.png)
+![printSplash](https://user-images.githubusercontent.com/66964752/123490536-aad3c180-d5ea-11eb-9787-f77e2ac841e9.png)![Inicial](https://user-images.githubusercontent.com/66964752/123490800-6563c400-d5eb-11eb-8b8a-6b4ee925ffce.png)
+
