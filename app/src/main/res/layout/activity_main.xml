@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/flex200x200" />
+        app:srcCompat="@drawable/flex512x512semfundo" />
 
     <TextView
         android:id="@+id/textView"
