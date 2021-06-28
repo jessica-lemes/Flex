@@ -14,4 +14,4 @@ A vantagem é calculada considerando que o poder calorífico do motor ao Etanol 
   
   * Dark Mode
 
-<img src="https://user-images.githubusercontent.com/66964752/123713110-19628a80-d84a-11eb-84dc-4769e17e029d.png" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://user-images.githubusercontent.com/66964752/123713171-36975900-d84a-11eb-9ab4-bb70f2b36ecb.png" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://user-images.githubusercontent.com/66964752/123713199-40b95780-d84a-11eb-8ddf-e05a20177cd8.png" width="200"/>
+<img src="https://user-images.githubusercontent.com/66964752/123713555-0dc39380-d84b-11eb-9356-707f2ef11866.png" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://user-images.githubusercontent.com/66964752/123713635-35b2f700-d84b-11eb-8b84-ef0e98dda363.png" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://user-images.githubusercontent.com/66964752/123713665-46fc0380-d84b-11eb-9bac-ff0a8fd49bf6.png" width="200"/>
