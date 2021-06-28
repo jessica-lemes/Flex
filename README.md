@@ -7,5 +7,11 @@ Este aplicativo calcula a melhor opção para o abastecimento levando em conside
 A vantagem é calculada considerando que o poder calorífico do motor ao Etanol é de 70% do poder dos motores à gasolina.
 
 <a href="https://play.google.com/store/apps/details?id=com.aplicativo.flex">  <img src="https://user-images.githubusercontent.com/66964752/123492017-a0b3c200-d5ee-11eb-9d37-33b6505861b8.png" height="80"/> <a>
+  
+* Light Mode
 
 <img src="https://user-images.githubusercontent.com/66964752/123490536-aad3c180-d5ea-11eb-9787-f77e2ac841e9.png" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://user-images.githubusercontent.com/66964752/123490839-87f5dd00-d5eb-11eb-981f-a7402ab08661.png" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://user-images.githubusercontent.com/66964752/123491239-a4dee000-d5ec-11eb-92c7-3b2a09f11d0e.png" width="200"/>
+  
+  * Dark Mode
+
+<img src="https://user-images.githubusercontent.com/66964752/123713110-19628a80-d84a-11eb-84dc-4769e17e029d.png" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://user-images.githubusercontent.com/66964752/123713171-36975900-d84a-11eb-9ab4-bb70f2b36ecb.png" width="200"/> &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://user-images.githubusercontent.com/66964752/123713199-40b95780-d84a-11eb-8ddf-e05a20177cd8.png" width="200"/>
