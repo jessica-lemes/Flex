@@ -2,11 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.Flex" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/amarelo</item>
-        <item name="colorPrimaryVariant">@color/amarelo_escuro</item>
+        <item name="colorPrimary">@color/laranja_escuro</item>
+        <item name="colorPrimaryVariant">@color/laranja_escuro</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColor">#000000</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/laranja</item>
+        <item name="colorSecondary">@color/laranja_escuro</item>
         <item name="colorSecondaryVariant">@color/laranja_escuro</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->

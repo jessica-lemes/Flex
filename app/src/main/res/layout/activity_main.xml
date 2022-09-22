@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_gravity="center|center_vertical"
     tools:context=".MainActivity">
 
@@ -27,10 +27,12 @@
         android:layout_marginStart="96dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="96dp"
+        android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
+
         android:text="Saiba a melhor opção de abastecimento!"
-        android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -38,12 +40,13 @@
     <Button
         android:id="@+id/btnCalcular"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:onClick="calcularPreco"
         android:text="Calcular"
+        android:textSize="16sp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,21 +77,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@null"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editPrecoAlcool"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bkg_round"
             android:drawableStart="@drawable/ic_gasoline_pump"
             android:drawablePadding="20dp"
             android:hint="Preço do álcool Ex: 1.90"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -103,12 +112,16 @@
         android:hint="Preço da gasolina Ex: 2.60"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutAlcool">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutAlcool"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@null"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editPrecoGasolina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bkg_round"
             android:drawableStart="@drawable/ic_gasoline_pump"
             android:drawablePadding="20dp"
             android:inputType="numberDecimal" />
