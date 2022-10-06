@@ -1,10 +1,13 @@
 package com.aplicativo.flex
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.aplicativo.flex.databinding.ActivityMainBinding
 import com.aplicativo.flex.databinding.ActivityMainBinding.inflate
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = inflate(layoutInflater)
         setContentView(binding.root)
+
     }
 
     fun calcularPreco(view: View){
@@ -27,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         if(validaCampos){
             calcularMelhorPreco(precoAlcool, precoGasolina)
         }else{
+            binding.cardViewResultado.visibility = View.VISIBLE
             binding.textResultado.text = "Preencha os preços primeiro"
         }
 
@@ -54,11 +59,16 @@ class MainActivity : AppCompatActivity() {
          */
 
         val resultadoPreco = valorAlcool / valorGasolina
+        val resultadoPorcentagem = resultadoPreco * 100
+        val resultadoPorcentagemInt = resultadoPorcentagem.toInt()
+
 
         if(resultadoPreco >= 0.7){
-            binding.textResultado.text = "Melhor utilizar gasolina"
+            binding.cardViewResultado.visibility = View.VISIBLE
+            binding.textResultado.text = "Melhor utilizar Gasolina. Paridade: " + resultadoPorcentagemInt + "%"
         }else{
-            binding.textResultado.text = "Melhor utilizar álcool"
+            binding.cardViewResultado.visibility = View.VISIBLE
+            binding.textResultado.text = "Melhor utilizar Álcool. Paridade: " + resultadoPorcentagemInt  + "%"
         }
 
 
