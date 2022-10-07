@@ -65,10 +65,10 @@ class MainActivity : AppCompatActivity() {
 
         if(resultadoPreco >= 0.7){
             binding.cardViewResultado.visibility = View.VISIBLE
-            binding.textResultado.text = "Melhor utilizar Gasolina. Paridade: " + resultadoPorcentagemInt + "%"
+            binding.textResultado.text = "Melhor utilizar Gasolina. \n Paridade: " + resultadoPorcentagemInt + "%"
         }else{
             binding.cardViewResultado.visibility = View.VISIBLE
-            binding.textResultado.text = "Melhor utilizar Álcool. Paridade: " + resultadoPorcentagemInt  + "%"
+            binding.textResultado.text = "Melhor utilizar Álcool.\n Paridade: " + resultadoPorcentagemInt  + "%"
         }
 
 
