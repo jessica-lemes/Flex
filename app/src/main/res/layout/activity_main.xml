@@ -29,7 +29,6 @@
         android:layout_marginEnd="96dp"
         android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
-
         android:text="Saiba a melhor opção de abastecimento!"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -37,12 +36,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutAlcool"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Preço do álcool Ex: 1.90"
+        android:textColorHint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:id="@+id/editPrecoAlcool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_gasoline_pump"
+            android:drawablePadding="20dp"
+            android:inputType="numberDecimal"
+            app:mask="#.###" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutGasolina"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Preço da gasolina Ex: 2.60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutAlcool">
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:id="@+id/editPrecoGasolina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_gasoline_pump"
+            android:drawablePadding="20dp"
+            android:inputType="numberDecimal"
+            app:mask="#.###"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btnCalcular"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:onClick="calcularPreco"
         android:text="Calcular"
@@ -54,74 +102,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutGasolina"
         app:layout_constraintVertical_bias="0." />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutAlcool"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Preço do álcool Ex: 1.90"
-
-        app:boxStrokeColor="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <br.com.sapereaude.maskedEditText.MaskedEditText
-            android:id="@+id/editPrecoAlcool"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bkg_round"
-            android:drawableStart="@drawable/ic_gasoline_pump"
-            android:drawablePadding="20dp"
-            android:inputType="numberDecimal"
-            app:mask="#.###"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutGasolina"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:hint="Preço da gasolina Ex: 2.60"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutAlcool"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@null"
-        >
-
-        <br.com.sapereaude.maskedEditText.MaskedEditText
-            android:id="@+id/editPrecoGasolina"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bkg_round"
-            android:drawableStart="@drawable/ic_gasoline_pump"
-            android:drawablePadding="20dp"
-            android:inputType="numberDecimal"
-            app:mask="#.###"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewResultado"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:background="@color/laranja"
+        android:visibility="invisible"
         app:cardBackgroundColor="@color/laranja_escuro"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
-        app:layout_constraintVertical_bias="0.0"
-        android:visibility="invisible">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textResultado"

@@ -1,10 +1,11 @@
 package com.aplicativo.flex
 
-import android.R
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.aplicativo.flex.databinding.ActivityMainBinding
 import com.aplicativo.flex.databinding.ActivityMainBinding.inflate
 
@@ -30,9 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         if(validaCampos){
             calcularMelhorPreco(precoAlcool, precoGasolina)
+            binding.root.hideKeyboard()
+
         }else{
-            binding.cardViewResultado.visibility = View.VISIBLE
-            binding.textResultado.text = "Preencha os preços primeiro"
+            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
         }
 
     }
@@ -65,12 +67,11 @@ class MainActivity : AppCompatActivity() {
 
         if(resultadoPreco >= 0.7){
             binding.cardViewResultado.visibility = View.VISIBLE
-            binding.textResultado.text = "Melhor utilizar Gasolina. \n Paridade: " + resultadoPorcentagemInt + "%"
+            binding.textResultado.text = "Melhor utilizar Gasolina. \n\n Paridade: " + resultadoPorcentagemInt + "%"
         }else{
             binding.cardViewResultado.visibility = View.VISIBLE
-            binding.textResultado.text = "Melhor utilizar Álcool.\n Paridade: " + resultadoPorcentagemInt  + "%"
+            binding.textResultado.text = "Melhor utilizar Álcool.\n\n Paridade: " + resultadoPorcentagemInt  + "%"
         }
-
 
     }
 
