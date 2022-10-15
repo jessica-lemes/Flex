@@ -27,11 +27,15 @@ class MainActivity : AppCompatActivity() {
         val precoAlcool = binding.editPrecoAlcool.text.toString()
         val precoGasolina = binding.editPrecoGasolina.text.toString()
 
+
+
         val validaCampos = validarCampos(precoAlcool, precoGasolina)
 
         if(validaCampos){
             calcularMelhorPreco(precoAlcool, precoGasolina)
             binding.root.hideKeyboard()
+            binding.editPrecoAlcool.clearFocus()
+            binding.editPrecoGasolina.clearFocus()
 
         }else{
             Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
@@ -67,10 +71,14 @@ class MainActivity : AppCompatActivity() {
 
         if(resultadoPreco >= 0.7){
             binding.cardViewResultado.visibility = View.VISIBLE
-            binding.textResultado.text = "Melhor utilizar Gasolina. \n\n Paridade: " + resultadoPorcentagemInt + "%"
+            binding.textResultadoAlcool.visibility = View.INVISIBLE
+            binding.textResultadoGasolina.visibility = View.VISIBLE
+            binding.textResultadoGasolina.text = "Melhor utilizar Gasolina \nParidade: " + resultadoPorcentagemInt + "%"
         }else{
             binding.cardViewResultado.visibility = View.VISIBLE
-            binding.textResultado.text = "Melhor utilizar Álcool.\n\n Paridade: " + resultadoPorcentagemInt  + "%"
+            binding.textResultadoGasolina.visibility = View.INVISIBLE
+            binding.textResultadoAlcool.visibility = View.VISIBLE
+            binding.textResultadoAlcool.text = "Melhor utilizar Álcool \nParidade: " + resultadoPorcentagemInt  + "%"
         }
 
     }

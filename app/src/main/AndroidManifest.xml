@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Flex">
         <activity android:name="com.aplicativo.flex.SplashActivity">
-
-        </activity>
-        <activity android:name="com.aplicativo.flex.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.aplicativo.flex.MainActivity">
+
         </activity>
     </application>
 

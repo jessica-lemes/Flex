@@ -39,17 +39,17 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutAlcool"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:hint="Preço do álcool Ex: 1.90"
-        android:textColorHint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
 
         <br.com.sapereaude.maskedEditText.MaskedEditText
             android:id="@+id/editPrecoAlcool"
@@ -62,8 +62,8 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutGasolina"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/textInputLayoutGasolina"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -112,6 +112,8 @@
         android:visibility="invisible"
         app:cardBackgroundColor="@color/laranja_escuro"
         app:cardCornerRadius="15dp"
+        app:contentPaddingLeft="20dp"
+        app:contentPaddingRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,12 +121,28 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/textResultado"
+            android:id="@+id/textResultadoGasolina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:drawableStart="@drawable/ic_gasolina"
+            android:drawablePadding="10dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textResultadoAlcool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:drawableStart="@drawable/ic_alcool"
+            android:drawablePadding="10dp"
             android:gravity="center_horizontal|center_vertical"
             android:textColor="@color/white"
             android:textSize="24sp"
