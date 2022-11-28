@@ -1,11 +1,12 @@
 package com.aplicativo.flex
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.aplicativo.flex.databinding.ActivityMainBinding
 import com.aplicativo.flex.databinding.ActivityMainBinding.inflate
 
@@ -19,15 +20,12 @@ class MainActivity : AppCompatActivity() {
 
         binding = inflate(layoutInflater)
         setContentView(binding.root)
-
     }
 
     fun calcularPreco(view: View){
 
         val precoAlcool = binding.editPrecoAlcool.text.toString()
         val precoGasolina = binding.editPrecoGasolina.text.toString()
-
-
 
         val validaCampos = validarCampos(precoAlcool, precoGasolina)
 
@@ -38,17 +36,17 @@ class MainActivity : AppCompatActivity() {
             binding.editPrecoGasolina.clearFocus()
 
         }else{
-            Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Preencha todos os campos corretamente", Toast.LENGTH_LONG).show()
         }
 
     }
     fun validarCampos(precoAlcool : String, precoGasolina : String): Boolean {
         var camposValidados = true
 
-        if(precoAlcool.isEmpty()){
+        if(precoAlcool.isEmpty() || precoAlcool.toDouble() == 0.0){
             camposValidados = false
 
-        }else if(precoGasolina.isEmpty()){
+        }else if(precoGasolina.isEmpty() || precoGasolina.toDouble() == 0.0){
             camposValidados = false
         }
         return camposValidados

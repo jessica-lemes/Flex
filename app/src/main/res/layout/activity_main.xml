@@ -58,7 +58,9 @@
             android:drawableStart="@drawable/ic_gasoline_pump"
             android:drawablePadding="20dp"
             android:inputType="numberDecimal"
-            app:mask="#.###" />
+            app:mask="#.###"
+            android:maxLines="1"
+            android:imeOptions="actionNext"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -82,6 +84,8 @@
             android:drawablePadding="20dp"
             android:inputType="numberDecimal"
             app:mask="#.###"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -106,19 +110,22 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewResultado"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@color/laranja"
         android:visibility="invisible"
         app:cardBackgroundColor="@color/laranja_escuro"
         app:cardCornerRadius="15dp"
+        app:contentPaddingBottom="20dp"
         app:contentPaddingLeft="20dp"
         app:contentPaddingRight="20dp"
+        app:contentPaddingTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/textResultadoGasolina"
@@ -130,6 +137,7 @@
             android:drawableStart="@drawable/ic_gasolina"
             android:drawablePadding="10dp"
             android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -144,6 +152,7 @@
             android:drawableStart="@drawable/ic_alcool"
             android:drawablePadding="10dp"
             android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
