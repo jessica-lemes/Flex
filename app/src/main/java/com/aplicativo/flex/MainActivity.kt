@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,27 @@ class MainActivity : AppCompatActivity() {
 
         binding = inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.editPrecoGasolina.setOnEditorActionListener{ v, actionId, event ->
+            when(actionId){
+            EditorInfo.IME_ACTION_DONE -> {
+                calcularPreco(binding.root)
+                true}
+            else -> false
+            }
+        }
+
+        binding.editPrecoAlcool.setOnEditorActionListener{ v, actionId, event ->
+            when(actionId){
+                EditorInfo.IME_ACTION_DONE -> {
+                    binding.editPrecoGasolina.findFocus()
+                    true}
+                else -> false
+            }
+        }
+
+
+
     }
 
     fun calcularPreco(view: View){
@@ -38,8 +60,8 @@ class MainActivity : AppCompatActivity() {
         }else{
             Toast.makeText(this, "Preencha todos os campos corretamente", Toast.LENGTH_LONG).show()
         }
-
     }
+
     fun validarCampos(precoAlcool : String, precoGasolina : String): Boolean {
         var camposValidados = true
 
