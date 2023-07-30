@@ -15,7 +15,8 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2">
+    <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt"
+        parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="android:textColor">@color/white</item>
     </style>
 

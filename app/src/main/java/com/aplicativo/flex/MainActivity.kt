@@ -1,16 +1,15 @@
 package com.aplicativo.flex
 
-import android.app.Activity
-import android.content.Context
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
+import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.aplicativo.flex.databinding.ActivityMainBinding
 import com.aplicativo.flex.databinding.ActivityMainBinding.inflate
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -18,9 +17,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         binding = inflate(layoutInflater)
         setContentView(binding.root)
+
+        //setando o modo Dark / Light utilizando Switch
+        binding.btnDarkLightMode.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if(isChecked){
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }else{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
 
         binding.editPrecoGasolina.setOnEditorActionListener{ v, actionId, event ->
             when(actionId){
@@ -39,9 +48,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
-
-
     }
 
     fun calcularPreco(view: View){
@@ -102,6 +108,8 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
 
 
 }
